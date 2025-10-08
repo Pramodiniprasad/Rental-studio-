@@ -16,7 +16,7 @@ import "./App.css";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [userName, setUserName] = useState("Aradhana S"); 
+  const [userName, setUserName] = useState(""); 
 
   // Show login screen if not logged in
   if (!isLoggedIn) {
