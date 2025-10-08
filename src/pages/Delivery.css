@@ -1,0 +1,61 @@
+.delivery-page {
+  padding: 20px;
+  font-family: sans-serif;
+  background: #f4f4f4;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+/* FILTER BAR */
+.filters {
+  display: flex;
+  justify-content: flex-end; /* Align everything to right */
+  align-items: center;
+  gap: 10px; /* Space between elements */
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Wrap on small screens */
+}
+
+.filters select,
+.filters .date-input,
+.filters input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.filters .date-input {
+  width: 130px; /* Compact date pickers */
+}
+
+.filters input {
+  width: 180px; /* Search box width */
+}
+
+/* TABLE STYLING */
+.delivery-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.delivery-table th,
+.delivery-table td {
+  border: 1px solid #eee;
+  padding: 10px;
+  text-align: left;
+}
+
+.delivery-table th {
+  background: #f7f7f7;
+}
+
+.no-data {
+  text-align: center;
+  color: gray;
+  padding: 20px;
+}
