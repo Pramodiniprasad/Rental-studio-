@@ -8,18 +8,15 @@ import Products from "./pages/Products";
 import Orders from "./pages/Orders";
 import Statistics from "./pages/Statistics";
 import Sidebar from "./components/Sidebar";
-<<<<<<< HEAD
 import OrderView from "./pages/OrderView";
-import Header from "./components/Header"; // ✅ make sure this file exists
-=======
 import Header from "./components/Header"; 
+
 import CreateBooking from "./pages/CreateBooking"; 
->>>>>>> 545d73e (createbook page fixes)
 import "./App.css";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [userName, setUserName] = useState("Aradhana S"); // ✅ set a default username
+  const [userName, setUserName] = useState("Aradhana S"); 
 
   // Show login screen if not logged in
   if (!isLoggedIn) {
