@@ -1,0 +1,98 @@
+.create-booking-container {
+  padding: 24px;
+  background: #f9f9f9;
+  font-family: "Inter", sans-serif;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 12px;
+}
+
+.heading {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.booking-form {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.form-section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  flex: 1;
+}
+
+.left {
+  flex: 2;
+}
+
+.right {
+  flex: 1;
+}
+
+.input-row,
+.product-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+input,
+select,
+textarea,
+button {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="date"] {
+  min-width: 140px;
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+}
+
+.discount-toggle {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.summary-box {
+  margin: 20px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.cancel-btn {
+  background: #ccc;
+  color: #000;
+}
+
+.book-btn {
+  background: #000;
+  color: #fff;
+}

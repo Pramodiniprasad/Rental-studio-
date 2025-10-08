@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
@@ -13,24 +13,44 @@ import Header from "./components/Header"; // ✅ make sure this file exists
 import EditProduct from "./pages/EditProduct";
 import AddProduct from "./pages/AddProduct";
 import ImportProducts from "./pages/ImportProducts";
+import CreateBooking from "./pages/CreateBooking";
+import Profile from "./pages/Profile";
+import ChangePassword from "./pages/ChangePassword";
+
 import "./App.css";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [userName, setUserName] = useState("Aradhana S"); // ✅ set a default username
+  // Read login status from localStorage (so it persists on refresh)
+  const [isLoggedIn, setIsLoggedIn] = useState(() => {
+    return localStorage.getItem("isLoggedIn") === "true";
+  });
 
-  // Show login screen if not logged in
+  const [userName, setUserName] = useState(() => {
+    return localStorage.getItem("userName") || "User";
+  });
+
+  const handleLogin = (name) => {
+    setIsLoggedIn(true);
+    setUserName(name);
+    localStorage.setItem("isLoggedIn", "true");
+    localStorage.setItem("userName", name);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("userName");
+    setIsLoggedIn(false);
+  };
+
   if (!isLoggedIn) {
-    return <Login onLogin={() => setIsLoggedIn(true)} />;
+    return <Login onLogin={handleLogin} />;
   }
 
-  // Main layout after login
   return (
     <div className="app">
       <Sidebar />
       <div className="main-content">
-        {/* ✅ Header added */}
-        <Header userName={userName} />
+        <Header userName={userName} onLogout={handleLogout} />
 
         <Routes>
           <Route path="/" element={<Home />} />
@@ -40,6 +60,9 @@ function App() {
           <Route path="/orders" element={<Orders />} />
           <Route path="/orders/:id/view" element={<OrderView />} />
           <Route path="/statistics" element={<Statistics />} />
+          <Route path="/create-booking" element={<CreateBooking />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/change-password" element={<ChangePassword />} />
           <Route path="*" element={<Navigate to="/" />} />
           <Route path="/products/:id/edit" element={<EditProduct />} />
           <Route path="/add-product" element={<AddProduct />} />
