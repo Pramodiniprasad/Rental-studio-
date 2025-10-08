@@ -1,0 +1,108 @@
+.order-view-container {
+  padding: 24px;
+  font-family: "Inter", sans-serif;
+  background-color: #f9fafb;
+  min-height: 100vh;
+}
+
+.breadcrumb {
+  color: #6b7280;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+.breadcrumb .link {
+  color: #4f46e5;
+  cursor: pointer;
+}
+
+.header-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.header-actions button {
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.whatsapp-btn {
+  color: #10b981;
+  border-color: #10b981;
+}
+.download-btn {
+  color: #059669;
+  border-color: #059669;
+}
+
+.invoice-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.invoice-header h3 {
+  font-size: 16px;
+  background: #f3f4f6;
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.customer-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 16px 0;
+  margin-top: 10px;
+}
+
+.customer-section h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+.customer-section p {
+  margin: 4px 0 0;
+  color: #6b7280;
+}
+
+.date-tag {
+  background: #e5e7eb;
+  color: #111827;
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.product-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.product-table th {
+  background: #f3f4f6;
+  text-align: left;
+  padding: 12px;
+  color: #374151;
+  font-weight: 600;
+}
+
+.product-table td {
+  padding: 12px;
+  border-top: 1px solid #e5e7eb;
+  color: #111827;
+}

@@ -8,6 +8,7 @@
   import Orders from "./pages/Orders";
   import Statistics from "./pages/Statistics";
   import Sidebar from "./components/Sidebar";
+  import OrderView from "./pages/OrderView";
   import "./App.css";
 
   function App() {
@@ -27,6 +28,7 @@
             <Route path="/return" element={<Return />} />
             <Route path="/products" element={<Products />} />
             <Route path="/orders" element={<Orders />} />
+            <Route path="/orders/:id/view" element={<OrderView />} />
             <Route path="/statistics" element={<Statistics />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
