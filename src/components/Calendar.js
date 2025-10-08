@@ -49,19 +49,39 @@ function Calendar() {
 
   return (
     <div className="calendar-container">
-      <div className="calendar-header">
+    <div className="calendar-header">
+      <div className="month-navigation">
         <button onClick={() => changeMonth(-1)}>‹</button>
         <h3>{monthNames[currentMonth]} {currentYear}</h3>
         <button onClick={() => changeMonth(1)}>›</button>
       </div>
-
+    </div>
+    
       <div className="calendar-grid">
         {["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"].map((d) => (
           <div key={d} className="day-name">{d}</div>
         ))}
-        {days.map((d, i) => (
-          <div key={i} className={`day ${d.type}`}>{d.day}</div>
-        ))}
+        {days.map((d, i) => {
+          const showMonthName = d.day === 1;
+          return (
+            <div key={i} className={`day ${d.type}`}>
+              {showMonthName ? (
+                <span className="month-label">
+                  {monthNames[
+                    d.type === "prev"
+                      ? (currentMonth + 11) % 12
+                      : d.type === "next"
+                      ? (currentMonth + 1) % 12
+                      : currentMonth
+                  ]}{" "}
+                  {d.day}
+                </span>
+              ) : (
+                d.day
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
