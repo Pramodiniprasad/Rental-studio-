@@ -1,16 +1,14 @@
-.app-header {
+/* src/components/Header.css */
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #f8f9fa;
   padding: 10px 20px;
+  background: #fff;
   border-bottom: 1px solid #ddd;
-}
-
-.header-left h2 {
-  font-size: 20px;
-  font-weight: 600;
-  margin: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .header-right {
@@ -19,38 +17,22 @@
   gap: 15px;
 }
 
-.product-select select {
-  padding: 8px 12px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  background: #fff;
-  font-size: 14px;
-}
-
 .create-btn {
   background: #000;
   color: #fff;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   padding: 8px 14px;
-  font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .create-btn:hover {
   background: #333;
 }
 
-.user-info {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 14px;
+.user-name {
   font-weight: 500;
   color: #000;
-}
-
-.arrow {
-  font-size: 10px;
 }
