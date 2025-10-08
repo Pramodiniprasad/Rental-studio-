@@ -1,0 +1,151 @@
+.products-page {
+  background: #f9fafb;
+  border-radius: 10px;
+  padding: 20px;
+  min-height: calc(100vh - 100px);
+}
+
+.products-page h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.products-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-select,
+.search-input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 14px;
+}
+
+.search-input {
+  width: 200px;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.add-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background: #333;
+}
+
+.import-btn {
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.import-btn:hover {
+  background: #f0f0f0;
+}
+
+.products-table {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th {
+  text-align: left;
+  background: #f5f6f8;
+  padding: 12px 15px;
+  color: #333;
+  font-weight: 600;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+
+.product-img {
+  width: 50px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.placeholder-img {
+  width: 50px;
+  height: 60px;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  color: #999;
+}
+
+/* ✅ Status dropdowns */
+.status-select {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.status-select.available {
+  background: #ecfdf5;
+  color: #059669;
+  border-color: #a7f3d0;
+}
+
+.status-select.laundry {
+  background: #eff6ff;
+  color: #2563eb;
+  border-color: #bfdbfe;
+}
+
+.status-select.archived {
+  background: #fef2f2;
+  color: #b91c1c;
+  border-color: #fecaca;
+}
+
+.action-icon {
+  font-size: 16px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.action-icon.edit {
+  color: #111;
+}
+
+.action-icon.delete {
+  color: #dc2626;
+}

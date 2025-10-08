@@ -10,6 +10,9 @@ import Statistics from "./pages/Statistics";
 import Sidebar from "./components/Sidebar";
 import OrderView from "./pages/OrderView";
 import Header from "./components/Header"; // ✅ make sure this file exists
+import EditProduct from "./pages/EditProduct";
+import AddProduct from "./pages/AddProduct";
+import ImportProducts from "./pages/ImportProducts";
 import "./App.css";
 
 function App() {
@@ -38,6 +41,9 @@ function App() {
           <Route path="/orders/:id/view" element={<OrderView />} />
           <Route path="/statistics" element={<Statistics />} />
           <Route path="*" element={<Navigate to="/" />} />
+          <Route path="/products/:id/edit" element={<EditProduct />} />
+          <Route path="/add-product" element={<AddProduct />} />
+          <Route path="/import-products" element={<ImportProducts />} />"
         </Routes>
       </div>
     </div>
