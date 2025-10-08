@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import Calendar from "../components/Calendar";
 import "./Home.css";
 import { FiSearch } from "react-icons/fi";
+import { useNavigate } from "react-router-dom"; 
 
 function Home() {
   const [searchTerm, setSearchTerm] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState("Select a product");
+
+  const navigate = useNavigate(); 
 
   const products = [
     "PRWBLAKBLAZER-0 : BLACK GOWN",
@@ -21,6 +24,10 @@ function Home() {
   const handleSelect = (product) => {
     setSelectedProduct(product);
     setShowDropdown(false);
+  };
+
+  const handleCreateBooking = () => {
+    navigate("/create-booking"); // navigate to the booking form
   };
 
   return (
@@ -66,8 +73,10 @@ function Home() {
             )}
           </div>
 
-          {/* Create Booking Button */}
-          <button className="create-btn">+ Create Booking</button>
+          {/* ✅ Create Booking Button with onClick handler */}
+          <button className="create-btn" onClick={handleCreateBooking}>
+            + Create Booking
+          </button>
         </div>
       </div>
 

@@ -8,8 +8,13 @@ import Products from "./pages/Products";
 import Orders from "./pages/Orders";
 import Statistics from "./pages/Statistics";
 import Sidebar from "./components/Sidebar";
+<<<<<<< HEAD
 import OrderView from "./pages/OrderView";
 import Header from "./components/Header"; // ✅ make sure this file exists
+=======
+import Header from "./components/Header"; 
+import CreateBooking from "./pages/CreateBooking"; 
+>>>>>>> 545d73e (createbook page fixes)
 import "./App.css";
 
 function App() {
@@ -37,6 +42,7 @@ function App() {
           <Route path="/orders" element={<Orders />} />
           <Route path="/orders/:id/view" element={<OrderView />} />
           <Route path="/statistics" element={<Statistics />} />
+          <Route path="/create-booking" element={<CreateBooking />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </div>
